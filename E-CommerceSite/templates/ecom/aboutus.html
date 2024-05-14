@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>FashionFuse Hub</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color:#f7f7f7;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:center;">"Welcome to [FashionFuse Hub], your ultimate destination for all your shopping needs! Explore our extensive collection of high-quality products, ranging from trendy fashion to cutting-edge electronics, all curated to cater to your diverse tastes and preferences. Enjoy a seamless shopping experience with secure payments, fast shipping, and exceptional customer service. Start browsing now and discover the perfect items to elevate your lifestyle!" </h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+<!--
+developed By : Nidhi Rana
+-->
+
+</html>
